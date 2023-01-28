@@ -125,7 +125,7 @@ export const Container = styled.div`
       }
     }
     .logos {
-      font-size: 10px;
+      font-size: 8px;
     }
     .logo {
       width: 35px;
@@ -138,7 +138,7 @@ export const Container = styled.div`
     }
 
     .copyright {
-      font-size: 8px;
+      font-size: 5px;
       margin-top: 2.5rem;
       > span {
         // font-size: 12px;
