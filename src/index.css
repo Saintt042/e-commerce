@@ -5,6 +5,8 @@ body {
   font-family: 'Ubuntu';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  list-style: none;
 }
 
 /* code {
