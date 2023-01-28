@@ -17,27 +17,17 @@ export const Container = styled.div`
 	
 
 	@media screen and (max-width: 900px) {
-		width: 85%;
+		width: 100%;
 	}
 	@media screen and (max-width: 750px) {
-		.leftSect {
-			width: 80%;
-		}
+			// width: 80%;
 	}
 	@media screen and (max-width: 600px) {
-		padding: 15px 0 15px 10%;
 		width: 100%;
-		.category {
-			display: none;
-		}
-		.rightSect {
-			width: 40%;
-		}
-		.leftSect {
-			width: max-content;
-		}
-		.ham {
-			display: block;
-		}
+		
+	}
+	@media screen and (max-width: 320px) {
+		width: 100%;
+		
 	}
     `;

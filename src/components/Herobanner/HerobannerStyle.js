@@ -61,9 +61,9 @@ export const Container = styled.div`
       
       .desc{
       position: absolute;
-      right: 10%;
+      right: 15%;
       bottom: 5%;
-      width: 300px;
+      width: 150px;
       line-height: 1.3;
       display: flex;
       flex-direction: column;
@@ -118,12 +118,18 @@ export const Container = styled.div`
 	@media screen and (max-width: 600px) {
 		// padding: 15px 0 15px 10%;
 		// width: 75%;
+        .hero-banner-container h1{
+            font-size: 22px;
+          }
+         .hero-banner-container h3{
+            font-size: 17px;
+          }
 		
 	}
     @media screen and (max-width: 320px) {
-		// padding: 15px 0 15px 10%;
+       
         .hero-banner-container h1{
-            font-size: 20px;
+            font-size: 15px;
           }
          .hero-banner-container h3{
             font-size: 15px;
@@ -132,7 +138,7 @@ export const Container = styled.div`
             width: 37%;
             height: 22%;
             top: -0.5%;
-            right: -6%;
+            left: 46%;
           }
 		
 	}
