@@ -97,7 +97,7 @@ export const Container = styled.div`
       font-size: 15px;
     }
     .copyright {
-      font-size: 12px;
+      font-size: 10px;
       margin-top: 2.5rem;
       > span {
         // font-size: 12px;
