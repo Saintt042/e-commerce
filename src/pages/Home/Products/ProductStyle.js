@@ -20,6 +20,7 @@ export const Container = styled.div`
   }
 
   .product-detail-image {
+    align-content: center;
     border-radius: 15px;
     background-color: #ebebeb;
     width: 400px;
