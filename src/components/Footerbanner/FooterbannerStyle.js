@@ -25,7 +25,7 @@ export const Container = styled.div`
     justify-content: space-between;
   }
   .banner-desc button {
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 10px 16px;
     background-color: white;
     color: red;
@@ -96,6 +96,22 @@ export const Container = styled.div`
   @media screen and (max-width: 750px) {
   }
   @media screen and (max-width: 600px) {
+    .footer-banner-image {
+    }
+    .banner-desc button {
+      font-size: 15px;
+    }
+    .banner-desc .left h3 {
+      font-size: 20px;
+      margin-left: -20px;
+    }
+   
+    .banner-desc .right h3 {
+      font-size: 25px;
+    }
+    .banner-desc .right p {
+      font-size: 15px;
+    }
   }
   @media screen and (max-width: 320px) {
     .footer-banner-image {

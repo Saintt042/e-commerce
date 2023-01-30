@@ -4,16 +4,28 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
 
 	margin: auto;
-	width: 95%;
+	width: 100%;
 	max-width: 900px;
-	// border-bottom: 1px solid #e8e7ec;
+	border-bottom: 1px solid #e8e7ec;
 	// display: flex;
 	// justify-content: space-between;
 
 	& > * {
-		// display: flex;
 		align-items: center;
 	}
+	.products-heading {
+		text-align: center;
+	}
+	.products-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+		margin-top: 20px;
+		width: 100%;
+	  }
+
+
 	
 
 	@media screen and (max-width: 900px) {

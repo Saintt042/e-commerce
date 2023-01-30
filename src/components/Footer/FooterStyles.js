@@ -56,12 +56,11 @@ export const Container = styled.div`
       margin-bottom: 1rem;
     }
     ul li {
-      text-align: start;
       color: #c7c7cd;
       margin-bottom: 10px;
       font-size: clamp(0.8rem, 1vw, 1rem);
       list-style: none;
-      margin-right: 30px;
+      margin-right: 20px;
       &:hover {
         text-decoration: underline;
       }
@@ -115,10 +114,10 @@ export const Container = styled.div`
     .community,
     .about {
       h2 {
-        font-size: 10px;
+        font-size: 9px;
       }
       ul li {
-        font-size: 10px;
+        font-size: 9px;
         &:hover {
           text-decoration: underline;
         }
