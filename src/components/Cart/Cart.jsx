@@ -23,14 +23,14 @@ const Cart = () => {
             <span className="cart-num-items">scsvsws</span>
           </button>
 
-          {/* <div className="empty-cart">
+          <div className="empty-cart">
             <ShoppingCartIcon className="emptyshopcart" />
             <h3>Your shopping bag is empty</h3>
 
             <button type="button" onClick="" className="btn">
               Continue Shopping
             </button>
-          </div> */}
+          </div>
 
           <div className="product-container">
             <div className="product" key="">
@@ -63,16 +63,16 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="cart-bottom">
-          <div className="total">
-            <h3 className="subtotal">SubTotal:</h3>
-            <h3 className="totalprice">₦ Total Price</h3>
-          </div>
-          <div className="btn-container">
-            <button type="button" className="btn" onClick="">
-              Pay with Paystack
-            </button>
+          <div className="cart-bottom">
+            <div className="total">
+              <h3 className="subtotal">SubTotal:</h3>
+              <h3 className="totalprice">₦ Total Price</h3>
+            </div>
+            <div className="btn-container">
+              <button type="button" className="btn" onClick="">
+                Pay with Paystack
+              </button>
+            </div>
           </div>
         </div>
       </div>
