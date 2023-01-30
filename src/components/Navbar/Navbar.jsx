@@ -16,6 +16,10 @@ import MailIcon from '@mui/icons-material/Mail';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Button } from '@mui/material';
+import AppContext from '../Context/Appcontext';
+import { useContext } from 'react';
+
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -32,6 +36,7 @@ const Search = styled('div')(({ theme }) => ({
     width: 'auto',
   },
 }));
+
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -63,10 +68,11 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
+  const { setClick } = useContext(AppContext);
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -80,6 +86,7 @@ export default function PrimarySearchAppBar() {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+  // const { setClick } = useContext(AppContext);
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -135,10 +142,10 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge badgeContent={107} color="error">
-          <ShoppingCartIcon />
+          <ShoppingCartIcon onClick={() => setClick()} />
           </Badge>
         </IconButton>
-        <p>Shopping Cart</p>
+        <p onClick={() => setClick()} >Shopping Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -154,6 +161,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
     </Menu>
   );
+  
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -199,7 +207,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={107} color="error">
-                <ShoppingCartIcon />
+                <ShoppingCartIcon onClick={() => setClick()} />
               </Badge>
             </IconButton>
             <IconButton
