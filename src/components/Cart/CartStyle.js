@@ -171,7 +171,7 @@ export const Container = styled.div`
     }
     .empty-cart h3 {
       font-weight: 600;
-      font-size: 5px;
+      font-size: 10px;
     }
 
     ///////////////////

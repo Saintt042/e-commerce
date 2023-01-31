@@ -13,6 +13,7 @@ export const Container = styled.div`
   }
   .product-detail-container {
     display: flex;
+    justify-content: center;
     gap: 40px;
     margin: 30px;
     margin-top: 60px;
@@ -172,11 +173,13 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 900px) {
+
     h1 {
       font-size: 20px;
     }
     .product-detail-container {
       flex-wrap: wrap;
+      display: flex;
     }
     .product-detail-container .product-detail-image {
       width: 300px;
@@ -225,6 +228,7 @@ export const Container = styled.div`
       }
       .buttons .add-to-cart,
     .buttons .buy-now {
+      width: 100%;
       font-size: 9px;
     }
 
