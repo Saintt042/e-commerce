@@ -7,7 +7,8 @@ import Footerbanner from "../../components/Footerbanner/Footerbanner";
 import Cart from "../../components/Cart/Cart";
 import AppContext from "../../components/Context/Appcontext";
 import Card from "../../components/Card/Card";
-import Product from "./Products/Product";
+import Product from "../Products/Product";
+
 
 const Home = () => {
   const { showCart } = useContext(AppContext);

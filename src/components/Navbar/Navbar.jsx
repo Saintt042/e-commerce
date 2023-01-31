@@ -18,6 +18,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import { Button } from '@mui/material';
 import AppContext from '../Context/Appcontext';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -182,7 +183,8 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            ZUBISMART
+          <Link
+          to='/' >  ZUBISMART </Link>
           </Typography>
           <Search>
             <SearchIconWrapper>

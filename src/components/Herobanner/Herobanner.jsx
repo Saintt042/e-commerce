@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Container } from './HerobannerStyle'
 
 const Herobanner = () => {
@@ -14,7 +15,9 @@ const Herobanner = () => {
         <div>
           {/* <Link href={`/product/${heroBanner.product}`}>
           <Link href="/ShopNow"> */}
+            <Link to="/products">
             <button type="button">heroBanner.buttonText</button>
+            </Link>
             {/* </Link>
           </Link> */}
           <div className="desc">

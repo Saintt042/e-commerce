@@ -225,7 +225,7 @@ export const Container = styled.div`
       }
       .buttons .add-to-cart,
     .buttons .buy-now {
-      font-size: 11px;
+      font-size: 10px;
     }
 
   }
