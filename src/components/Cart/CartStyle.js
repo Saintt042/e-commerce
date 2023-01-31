@@ -219,9 +219,12 @@ export const Container = styled.div`
     }
 
     .btn-container {
+      width: 10px;
+     
     }
     .btn {
       font-size: 10px;
+      width: 80%;
     }
     .emptyshopcart {
       font-size: 80px;
@@ -246,6 +249,7 @@ export const Container = styled.div`
     }
     .btn {
       font-size: 9px;
+      width: 60%;
     }
   }
 `;

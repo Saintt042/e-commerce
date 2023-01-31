@@ -6,7 +6,6 @@ export const Container = styled.div`
   max-width: 900px;
   position: relative;
   border-bottom: 1px solid #e8e7ec;
-  display: flex;
 
 
   @media screen and (max-width: 815px) {

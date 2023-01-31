@@ -221,11 +221,11 @@ export const Container = styled.div`
         font-size: 10px;
       }
       .quantity h3 {
-        font-size: 15px;
+        font-size: 12px;
       }
       .buttons .add-to-cart,
     .buttons .buy-now {
-      font-size: 10px;
+      font-size: 9px;
     }
 
   }
