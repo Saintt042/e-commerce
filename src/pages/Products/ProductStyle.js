@@ -172,7 +172,7 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 815px) {
 
     h1 {
       font-size: 20px;
@@ -191,6 +191,7 @@ export const Container = styled.div`
     }
     .buttons .add-to-cart,
     .buttons .buy-now {
+      font-size: 13px;
       width: 100%;
     }
     .quantity-desc span {
@@ -204,7 +205,7 @@ export const Container = styled.div`
     // width: 80%;
   }
   @media screen and (max-width: 600px) {
-    width: 100%;
+    // width: 100%;
   }
   @media screen and (max-width: 320px) {
     .product-detail-container .product-detail-image {
