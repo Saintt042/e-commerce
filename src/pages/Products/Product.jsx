@@ -3,6 +3,7 @@ import { Container } from './ProductStyle';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import nn from "../../nn.jpg";
 
 const Product = () => {
   return (
@@ -15,8 +16,8 @@ const Product = () => {
                 </div>
                 <div className='small-images-container'>
                      <img
-                        src=''
-                        className=''
+                        src={nn}
+                        className='small-image'
                         onMouseEnter=''
                         alt=''
                         />  

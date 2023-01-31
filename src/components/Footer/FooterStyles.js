@@ -10,6 +10,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   color: white;
   background-color: #1d1d1e;
+  border-radius: 5px;
 
   & > * {
     width: 25%;

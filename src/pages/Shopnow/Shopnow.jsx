@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import AppContext from '../../components/Context/Appcontext';
 import Cart from '../../components/Cart/Cart';
 import Footer from '../../components/Footer/Footer';
+import Card from '../../components/Card/Card';
 
 
 
@@ -14,7 +15,12 @@ const Shopnow = () => {
         <div>
         {showCart && <Cart />}
             <Navbar />
-            <Footer />
+            <div className="products-heading">
+          <h2>Best Seller Products</h2>
+          <p>Select from our list of properties</p>
+        </div>
+        <div className="products-container"><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /> </div>
+        <Footer />
         </div>
     </Container>
   )
