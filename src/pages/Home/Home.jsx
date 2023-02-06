@@ -9,6 +9,7 @@ import AppContext from "../../components/Context/Appcontext";
 import Card from "../../components/Card/Card";
 import Product from "../Products/Product";
 import useContentful from "../../useContentful/useContentful";
+import useContentfulTwo from "../../useContentful/useContentfulTwo";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 
   // const [ products, setProducts ] = useState([]);
   const { getProducts } = useContentful();
+  const { getBanner } = useContentfulTwo();
 
   useEffect(() => {
     const getData = async() => {
@@ -24,32 +26,45 @@ const Home = () => {
       const prodFields = [];
 			data.items.forEach((item) => prodFields.push(item.fields));
       dispatch ({type: 'GET_ITEMS', payload: prodFields}) 
-      console.log(prodFields)
+      // console.log(data)
     }
     getData()
+
+
+    const getBannerData = async() => {
+      const data = await getBanner()
+      const bannerFields = [];
+			data.items.forEach((item) => bannerFields.push(item.fields));
+      dispatch ({type: 'GET_BANNER', payload: bannerFields}) 
+      // console.log(data)
+    }
+    getBannerData()
     //eslint-disable-next-line
   }, [dispatch]);
 
+  const { products, banner } = useContext(AppContext)
 
   return (
+    
     <Container>
       <div>
         {showCart && <Cart />}
         <Navbar />
-        <Herobanner />
+        {banner.map((item, index) => (
+          <Herobanner key={index} item={item} />
+        ))}
+        
         <div className="products-heading">
           <Product />
           <h2>Best Seller Products</h2>
           <p>Select from our list of properties</p>
         </div>
         <div className="products-container">
-        {/* {products.map((product, index) => (
-          // <Card key={index} products = {products} /> 
-          <h1>{}</h1>
-        ))} */}
-          <Card /><Card />
-          <Card /><Card /><Card /><Card /><Card />
-          <Card /><Card /><Card /> 
+
+        {products.map((item, index) => (
+          <Card key={index} item= {item} /> 
+        ))}
+         
           </div>
         <Footerbanner />
         <Footer />

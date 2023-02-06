@@ -10,6 +10,12 @@ const appReducer = (state, action) => {
 			return {
 				...state,
 				products: action.payload
+			};
+
+		case 'GET_BANNER':
+			return {
+				...state,
+				banner: action.payload
 			}
 
 		

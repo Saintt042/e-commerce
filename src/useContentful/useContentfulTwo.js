@@ -3,27 +3,28 @@ import { createClient } from "contentful";
 
 
 
-const useContentful = () => {
+const useContentfulTwo = () => {
     const client = createClient({
         space: "ys39ym33ba2p",
-        accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+        accessToken: process.env.REACT_APP_BANNER_ACCESS_TOKEN,
         host: "cdn.contentful.com"
     });
     
-    const getProducts = async () => {
+    const getBanner = async () => {
         try {
             const entries = await client.getEntries({
-                content_type: "product",
+                content_type: "banner",
                 select: "fields"
             });
+
             return entries
         } catch (error) {
             console.log(`error fetching products: ${error}`)
         }
     };
 
-    return { getProducts };
+    return { getBanner };
 
 }
 
-export default useContentful
+export default useContentfulTwo

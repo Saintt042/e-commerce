@@ -1,18 +1,19 @@
 import React from "react";
 import { Container } from "./CardStyle";
-import nn from '../../nn.jpg'
+// import nn from '../../nn.jpg'
 
-const Card = () => {
+const Card = ({ item }) => {
+
   return (
     <Container>
       <figure>
-        <img src={nn} alt="product-img" />
+        <img src={item.avatar[0].fields.file.url} alt="product-img" />
       </figure>
 
       <section className="info">
         <div>
-          <p>name  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, aliquid tempora. Iure beatae nulla nihil quos alias repudiandae porro ea?</p>
-          <p>₦price</p>
+          <p>{item.name}</p>
+          <p>{item.price}</p>
         </div>
       </section>
     </Container>

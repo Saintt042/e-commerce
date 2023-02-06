@@ -6,7 +6,8 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
 	const initialState = {
 		showCart: false,
-		products: []		
+		products: [],
+		banner: null		
 	};
 	const [state, dispatch] = useReducer(appReducer, initialState)
 

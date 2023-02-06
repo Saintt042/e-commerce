@@ -68,6 +68,24 @@ export default function PrimarySearchAppBar() {
   const setClick = () => {
     dispatch({ type: 'SHOW_CART' });
   }
+
+
+  // const Search = ({ search }) => {
+  //   const [text, setText] = useState("")
+  //   const handleChange = (e) => {
+  //     setText(e.target.value)
+  //     // console.log(text)
+  //   }
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault()
+  //     search(text)
+  //   }
+  // }  
+
+
+
+
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
