@@ -7,7 +7,7 @@ export const AppProvider = ({ children }) => {
 	const initialState = {
 		showCart: false,
 		products: [],
-		banner: null		
+		banner: []		
 	};
 	const [state, dispatch] = useReducer(appReducer, initialState)
 
