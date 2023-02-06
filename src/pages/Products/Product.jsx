@@ -18,7 +18,6 @@ const Product = () => {
                      <img
                         src={nn}
                         className='small-image'
-                        onMouseEnter=''
                         alt=''
                         />  
                 </div>
@@ -44,24 +43,24 @@ const Product = () => {
                     <h3>Quantity:</h3>
                     <p className='quantity-desc'>
                         <span className='minus'
-                        onClick=''>
+                        >
                             <RemoveIcon />
                         </span>
 
                         <span className='num'
-                        onClick="">Quantity</span>
+                        >Quantity</span>
 
                         <span className='plus'
-                        onClick=''> <AddIcon /> </span>
+                        > <AddIcon /> </span>
                     </p>
                 </div>
                 <div className='buttons'>
                     <button type='button'
                     className='add-to-cart'
-                    onClick=''>Add to Cart</button>
+                    >Add to Cart</button>
                      <button type='button'
                     className='buy-now'
-                    onClick="">Buy Now</button>
+                   >Buy Now</button>
                 </div>
             </div>
         </div>

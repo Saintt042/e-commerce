@@ -64,12 +64,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+  const { dispatch } = useContext(AppContext);
+  const setClick = () => {
+    dispatch({ type: 'SHOW_CART' });
+  }
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const { setClick } = useContext(AppContext);
+ 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -143,10 +147,10 @@ export default function PrimarySearchAppBar() {
           color="inherit"
         >
           <Badge badgeContent={107} color="error">
-          <ShoppingCartIcon onClick={() => setClick()} />
+          <ShoppingCartIcon onClick={() => setClick() } />
           </Badge>
         </IconButton>
-        <p onClick={() => setClick()} >Shopping Cart</p>
+        <p onClick={() => setClick() } >Shopping Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -211,7 +215,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={107} color="error">
-                <ShoppingCartIcon onClick={() => setClick()} />
+                <ShoppingCartIcon onClick={() => setClick() } />
               </Badge>
             </IconButton>
             <IconButton

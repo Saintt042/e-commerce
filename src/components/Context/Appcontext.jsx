@@ -1,24 +1,20 @@
-import { createContext, useState } from 'react';
+import { createContext, useReducer } from 'react';
+import appReducer from './appReducer';
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-	const [showCart, setShowCart] = useState(false);
-	// const [showNav, setShowNav] = useState(false);
-
-	const setClick = () => {
-		setShowCart(!showCart);
+	const initialState = {
+		showCart: false,
+		products: []		
 	};
-	// const navClick = () => setShowNav(!showNav);
+	const [state, dispatch] = useReducer(appReducer, initialState)
 
 	return (
 		<AppContext.Provider
 			value={{
-				showCart,
-				setShowCart,
-				// showNav,
-				setClick,
-				// navClick,
+				...state,
+				dispatch	
 			}}>
 			{children}
 		</AppContext.Provider>

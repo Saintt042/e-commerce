@@ -8,7 +8,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AppContext from "../Context/Appcontext";
 
 const Cart = () => {
-  const { setShowCart } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
+  const setClick = () => {
+    dispatch({ type: 'SHOW_CART' });
+  }
   return (
     <Container>
       <div className="cart-wrapper">
@@ -16,7 +19,7 @@ const Cart = () => {
           <button
             type="button"
             className="cart-heading"
-            onClick={() => setShowCart(false)}
+            onClick={() =>  setClick() }
           >
             <ArrowBackIcon />
             <span className="heading">Your Cart</span>
@@ -27,14 +30,14 @@ const Cart = () => {
             <ShoppingCartIcon className="emptyshopcart" />
             <h3>Your shopping bag is empty</h3>
 
-            <button type="button" onClick="" className="btn">
+            <button type="button" className="btn">
               Continue Shopping
             </button>
           </div>
 
           <div className="product-container">
             <div className="product" key="">
-              <img src="" className="cart-product-image" alt="" />
+              <img src="" className="cart-product-image" alt="pic" />
               <div className="item-desc">
                 <div className="flex top">
                   <h5>Item name</h5>
@@ -43,20 +46,20 @@ const Cart = () => {
                 <div className="flex bottom">
                   <div>
                     <p className="quantity-desc">
-                      <span className="minus" onClick="">
+                      <span className="minus" >
                         <RemoveIcon />
                       </span>
 
-                      <span className="num" onClick="">
+                      <span className="num">
                         Item Quantity
                       </span>
 
-                      <span className="plus" onClick="">
+                      <span className="plus">
                         <AddIcon />
                       </span>
                     </p>
                   </div>
-                  <button className="remove-item" onClick="">
+                  <button className="remove-item">
                     <DeleteIcon />
                   </button>
                 </div>
@@ -69,7 +72,7 @@ const Cart = () => {
               <h3 className="totalprice">₦ Total Price</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick="">
+              <button type="button" className="btn">
                 Pay with Paystack
               </button>
             </div>

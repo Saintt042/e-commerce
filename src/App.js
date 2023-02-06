@@ -10,6 +10,9 @@ import Privacy from "./pages/Privacy/Privacy";
 import Shopnow from "./pages/Shopnow/Shopnow";
 import Terms from "./pages/Terms/Terms";
 
+
+
+
 function App() {
   return (
     <>
